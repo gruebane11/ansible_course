@@ -10,7 +10,9 @@
   - name: install httpd package
     ansible.builtin.yum:
       name: httpd
+      state: latest
 
   - name: install support for php
     ansible.builtin.yum:
       name: php
+      state: latest
