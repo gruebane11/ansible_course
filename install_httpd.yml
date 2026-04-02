@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index
+    ansible.builtin.yum:
+      update_cache: true
+
+  - name: install httpd package
+    ansible.builtin.yum:
+      name: httpd
+
+  - name: install support for php
+    ansible.builtin.yum:
+      name: php
